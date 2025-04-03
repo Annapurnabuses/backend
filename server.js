@@ -3,15 +3,10 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
 
-// import authRoutes from "./routes/authRoutes.js";
-// import marketRoutes from "./routes/marketRoutes.js";
-// import walletRoutes from "./routes/walletRoutes.js";
-// import betRoutes from "./routes/betRoutes.js";
-// import winRoutes from "./routes/winRoutes.js";
-// import adminAuthRoutes from "./routes/adminAuthRoutes.js";
 // import adminRoutes from "./routes/adminRoutes.js";
 // import userRoutes from "./routes/userRoutes.js";
 
+import adminAuthRoutes from "./routes/adminAuthRoutes.js";
 import authRoutes from "./routes/authRoutes.js"
 
 // Load environment variables
@@ -28,11 +23,7 @@ app.use(express.json());
 
 // Mount routes
 app.use("/api/auth", authRoutes); // Auth routes
-// app.use("/api/markets", marketRoutes); // Market routes
-// app.use("/api/wallet", walletRoutes); // Wallet routes
-// app.use("/api/bets", betRoutes); // Bets routes
-// app.use("/api/wins", winRoutes); // Wins routes
-// app.use("/api/admin", adminAuthRoutes); //Admin Auth routes
+app.use("/api/admin", adminAuthRoutes); //Admin Auth routes
 // app.use("/api/admin", adminRoutes); //Admin routes
 // app.use("/api/users", userRoutes);
 
