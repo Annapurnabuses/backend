@@ -12,7 +12,7 @@ import connectDB from "./config/db.js";
 // import adminRoutes from "./routes/adminRoutes.js";
 // import userRoutes from "./routes/userRoutes.js";
 
-import authRoute from "./routes/authRoutes.js"
+import authRoutes from "./routes/authRoutes.js"
 
 // Load environment variables
 dotenv.config();
@@ -27,7 +27,7 @@ const app = express();
 app.use(express.json());
 
 // Mount routes
-// app.use("/api/auth", authRoutes); // Auth routes
+app.use("/api/auth", authRoutes); // Auth routes
 // app.use("/api/markets", marketRoutes); // Market routes
 // app.use("/api/wallet", walletRoutes); // Wallet routes
 // app.use("/api/bets", betRoutes); // Bets routes
