@@ -4,8 +4,8 @@ import cors from "cors";
 import connectDB from "./config/db.js";
 
 // import adminRoutes from "./routes/adminRoutes.js";
-// import userRoutes from "./routes/userRoutes.js";
 
+import userRoutes from "./routes/userRoutes.js";
 import adminAuthRoutes from "./routes/adminAuthRoutes.js";
 import authRoutes from "./routes/authRoutes.js"
 
@@ -25,7 +25,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes); // Auth routes
 app.use("/api/admin", adminAuthRoutes); //Admin Auth routes
 // app.use("/api/admin", adminRoutes); //Admin routes
-// app.use("/api/users", userRoutes);
+app.use("/api/", userRoutes);
 
 // Test API route
 app.get("/", (req, res) => {

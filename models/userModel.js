@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema(
     // Fields for password reset functionality
     resetPasswordToken: { type: String },
     resetPasswordExpires: { type: Date },
-    phoneNumber: {
+    contact: {
       type: String,
       required: true,
       match: [/^\d{10}$/, 'Please provide a valid 10-digit phone number'],

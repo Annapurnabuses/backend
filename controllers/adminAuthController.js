@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs';
 
 // Register a new admin
 export const registerAdmin = async (req, res) => {
-  const { name, email, password, phoneNumber } = req.body;
+  const { name, email, password, contact } = req.body;
 
   try {
     const existingAdmin = await Admin.findOne({ email });
@@ -12,7 +12,7 @@ export const registerAdmin = async (req, res) => {
       return res.status(400).json({ message: 'Admin already exists' });
     }
 
-    const admin = new Admin({ name, email, password, phoneNumber });
+    const admin = new Admin({ name, email, password, contact });
     await admin.save();
 
     const token = jwt.sign({ id: admin._id }, process.env.JWT_SECRET, { expiresIn: '7d' });

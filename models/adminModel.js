@@ -14,7 +14,7 @@ const adminSchema = new mongoose.Schema(
       ],
     },
     password: { type: String, required: true },
-    phoneNumber: { type: String, required: true },
+    contact: { type: String, required: true },
     createdAt: { type: Date, default: Date.now },
   },
   { timestamps: true }
