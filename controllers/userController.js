@@ -17,11 +17,7 @@ export const getUserProfile = async (req, res) => {
       id: user._id,
       name: user.name,
       email: user.email,
-      phoneNumber: user.phoneNumber,
-      walletBalance: user.walletBalance,
-      transactions: user.transactions, // Includes related transactions
-      bets: user.bets, // Includes related bets
-      wins: user.wins, // Includes related wins
+      contact: user.contact,
     });
   } catch (error) {
     console.error('Error fetching user profile:', error.message);
