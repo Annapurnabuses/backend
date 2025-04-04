@@ -1,6 +1,6 @@
 import express from 'express';
-import { createUserBooking, getUserBookings } from '../controllers/bookingsController';
-import { getVehicles } from '../controllers/vehiclesController';
+import { createUserBooking, getUserBookings } from '../controllers/bookingsController.js';
+import { getVehicles } from '../controllers/vehiclesController.js';
 
 import { getUserProfile, forgotPassword, resetPassword } from '../controllers/userController.js';
 import auth from '../middleware/auth.js'; // Middleware for token verification

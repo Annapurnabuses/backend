@@ -3,11 +3,11 @@ import { getBookings,
   getBookingById,
   createAdminBooking,
   updateBooking,
-  deleteBooking } from '../controllers/bookingsController';
+  deleteBooking } from '../controllers/bookingsController.js';
 import { getVehicles, getVehicleById,
   createVehicle,
   updateVehicle,
-  deleteVehicle } from '../controllers/vehiclesController';
+  deleteVehicle } from '../controllers/vehiclesController.js';
 
 const router = express.Router();
 

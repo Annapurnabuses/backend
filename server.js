@@ -3,11 +3,10 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
 
-// import adminRoutes from "./routes/adminRoutes.js";
-
+import adminRoutes from "./routes/adminRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import adminAuthRoutes from "./routes/adminAuthRoutes.js";
-import authRoutes from "./routes/authRoutes.js"
+import authRoutes from "./routes/authRoutes.js";
 
 // Load environment variables
 dotenv.config();
@@ -24,7 +23,7 @@ app.use(express.json());
 // Mount routes
 app.use("/api/auth", authRoutes); // Auth routes
 app.use("/api/admin", adminAuthRoutes); //Admin Auth routes
-// app.use("/api/admin", adminRoutes); //Admin routes
+app.use("/api/admin", adminRoutes); //Admin routes
 app.use("/api/", userRoutes);
 
 // Test API route
