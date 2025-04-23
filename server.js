@@ -20,6 +20,9 @@ const app = express();
 // Middleware for parsing JSON
 app.use(express.json());
 
+// Allow all origins
+app.use(cors());
+
 // Mount routes
 app.use("/api/auth", authRoutes); // Auth routes
 app.use("/api/admin", adminAuthRoutes); //Admin Auth routes
